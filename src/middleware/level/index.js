@@ -29,7 +29,7 @@ export async function checkLevel(req, res, next) {
     const fileName = path.substring(path.lastIndexOf('/') + 1);
     if(fileName === currentLevel.answer) {
         if(currentLevel.id === group.currentLevel) {
-            group.currentLevel = nextLevel.id;
+            group.currentLevel+= 1;
             await redis.hSet('riddle.groups', group.code, JSON.stringify(group));
             logger.info(`${group.code} has passed level ${currentLevel.id} (${currentLevel.name})`);
         }
