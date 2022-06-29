@@ -19,7 +19,7 @@
     const params = new URLSearchParams(window.location.search);
 
     if(params.has('id')) {
-        fetch('http://localhost:1337/group/' + params.get('id')).then(response => response.json()).then(json => {
+        fetch('group/' + params.get('id')).then(response => response.json()).then(json => {
             document.querySelector('#code').innerHTML = json.code;
         });
     } else window.location.href = '/';
