@@ -1,0 +1,38 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #code {
+            display: flex;
+            height: 50px;
+            align-items: center;
+            margin: 10px;
+        }
+
+        .hide {
+            background-color: white;
+            user-select: none;
+        }
+    </style>
+</head>
+<script>
+    const params = new URLSearchParams(window.location.search);
+
+    if(params.has('id')) {
+        fetch('http://localhost:1337/group/' + params.get('id')).then(response => response.json()).then(json => {
+            document.querySelector('#code').innerHTML = json.code;
+        });
+    } else window.location.href = '/';
+</script>
+<body>
+    <div id="container">
+        <h1>Your group's code:</h1>
+        <span id="code" class="hide">0-0-0-0-0-0-0-0</span>
+        <span onclick="document.querySelector('#code').classList.remove('hide');">Click here to show code.</span>
+        <span>Remember to save this code. This is key for your account.</span>
+        <span style="margin-top: 20px;">DO NOT SHOW THIS CODE TO ANYONE,</span>
+        <span>UNLESS YOU WANT TO SOLVE WITH THEM.</span>
+        <a href="/" style="margin-top: 20px;">Click here to return to the main page.</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "Test Level",
+        "author": "animekkk",
+        "path": "testlevel",
+        "index": "test.html",
+        "answer": "answer.html"
+    },
+    {
+        "id": 2,
+        "name": "Test Level 2",
+        "author": "animekkk",
+        "path": "level2",
+        "index": "test.html",
+        "answer": "answer.html"
+    },
+    {
+        "id": 3,
+        "name": "Test Level 3",
+        "author": "animekkk",
+        "path": "level3",
+        "index": "test.html",
+        "answer": "answer.html"
+    },
+    {
+        "id": 4,
+        "name": "Test Level 4",
+        "author": "animekkk",
+        "path": "level4",
+        "index": "test.html",
+        "answer": "answer.html"
+    }
+]

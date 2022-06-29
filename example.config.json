@@ -1,13 +1,17 @@
 {
     "developer": {
-        "token": "123",
-        "port": 1337
+        "port": 1337,
+        "discord": {
+            "id": "",
+            "secret": "",
+            "redirect": ""
+        }
     },
-    "levels": {
-        "shuffle": false
+    "page": {
+        "viewCode": "/group"
     },
     "redis": {
-        "ip": "127.0.0.1",
+        "hostname": "127.0.0.1",
         "port": 6379,
         "password": ""
     }
